@@ -1,0 +1,74 @@
+{
+  "seed": 42,
+  "target_size": [
+    300,
+    300
+  ],
+  "raw_total": 5932,
+  "raw_md5_duplicates_removed": 1138,
+  "extra_pixel_duplicates_removed": 42,
+  "total_duplicates_removed": 1180,
+  "clean_unique_total": 4752,
+  "raw_per_class": [
+    {
+      "class": "Bacterialblight",
+      "raw_total": 1584,
+      "raw_md5_dups": 258,
+      "pixel_dups_extra": 42,
+      "unique_images": 1284
+    },
+    {
+      "class": "Blast",
+      "raw_total": 1440,
+      "raw_md5_dups": 480,
+      "pixel_dups_extra": 0,
+      "unique_images": 960
+    },
+    {
+      "class": "Brownspot",
+      "raw_total": 1600,
+      "raw_md5_dups": 400,
+      "pixel_dups_extra": 0,
+      "unique_images": 1200
+    },
+    {
+      "class": "Tungro",
+      "raw_total": 1308,
+      "raw_md5_dups": 0,
+      "pixel_dups_extra": 0,
+      "unique_images": 1308
+    }
+  ],
+  "split_summary": [
+    {
+      "split": "train",
+      "total": 3361,
+      "Bacterialblight": 912,
+      "Blast": 678,
+      "Brownspot": 840,
+      "Tungro": 931
+    },
+    {
+      "split": "val",
+      "total": 705,
+      "Bacterialblight": 180,
+      "Blast": 150,
+      "Brownspot": 182,
+      "Tungro": 193
+    },
+    {
+      "split": "test",
+      "total": 686,
+      "Bacterialblight": 192,
+      "Blast": 132,
+      "Brownspot": 178,
+      "Tungro": 184
+    }
+  ],
+  "preprocessing_notes": [
+    "Removed 1180 duplicates (1138 raw MD5 + 42 cross-format pixel-identical copies).",
+    "Converted 156 RGBA PNG images cleanly to 3-channel RGB.",
+    "Applied Square Center Crop + Lanczos Resize to 300x300 RGB on all images (especially Tungro portrait/landscape variants) to eliminate aspect-ratio and padding shortcut bias.",
+    "Performed Union-Find Dihedral Group-Aware Stratified Split (70% train / 15% val / 15% test) so identical leaves and their pre-augmented rotations/flips never leak across train/val/test."
+  ]
+}

@@ -1,0 +1,11 @@
+# Dataset archive & cleaned split (hosted on Google Drive for Kaggle)
+Rice_Leaf_Clean_Split.zip
+Rice_Leaf_Clean_Split/
+*.zip
+
+# Model checkpoints & cache
+*.pth
+*.pt
+.ipynb_checkpoints/
+__pycache__/
+*.pyc
